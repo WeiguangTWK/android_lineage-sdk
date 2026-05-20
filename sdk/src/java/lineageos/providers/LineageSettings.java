@@ -2097,6 +2097,42 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether TEE soft debug mode is enabled.
+         */
+        public static final String TEE_SOFT_DEBUG_ENABLED = "tee_soft_debug_enabled";
+
+        /** @hide */
+        public static final Validator TEE_SOFT_DEBUG_ENABLED_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Pipe-delimited target package list used by TEE soft debug.
+         */
+        public static final String TEE_SOFT_DEBUG_TARGET_PACKAGES =
+                "tee_soft_debug_target_packages";
+
+        /** @hide */
+        public static final Validator TEE_SOFT_DEBUG_TARGET_PACKAGES_VALIDATOR =
+                sAlwaysTrueValidator;
+
+        /**
+         * Absolute keybox XML path used by TEE soft debug.
+         */
+        public static final String TEE_SOFT_DEBUG_KEYBOX_PATH = "tee_soft_debug_keybox_path";
+
+        /** @hide */
+        public static final Validator TEE_SOFT_DEBUG_KEYBOX_PATH_VALIDATOR =
+                sAlwaysTrueValidator;
+
+        /**
+         * Inline keybox XML content used by TEE soft debug.
+         */
+        public static final String TEE_SOFT_DEBUG_KEYBOX_XML = "tee_soft_debug_keybox_xml";
+
+        /** @hide */
+        public static final Validator TEE_SOFT_DEBUG_KEYBOX_XML_VALIDATOR =
+                sAlwaysTrueValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2273,6 +2309,14 @@ public final class LineageSettings {
                     CLICK_PARTIAL_SCREENSHOT_VALIDATOR);
             VALIDATORS.put(ENABLE_TASKBAR,
                     ENABLE_TASKBAR_VALIDATOR);
+            VALIDATORS.put(TEE_SOFT_DEBUG_ENABLED,
+                    TEE_SOFT_DEBUG_ENABLED_VALIDATOR);
+            VALIDATORS.put(TEE_SOFT_DEBUG_TARGET_PACKAGES,
+                    TEE_SOFT_DEBUG_TARGET_PACKAGES_VALIDATOR);
+            VALIDATORS.put(TEE_SOFT_DEBUG_KEYBOX_PATH,
+                    TEE_SOFT_DEBUG_KEYBOX_PATH_VALIDATOR);
+            VALIDATORS.put(TEE_SOFT_DEBUG_KEYBOX_XML,
+                    TEE_SOFT_DEBUG_KEYBOX_XML_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
